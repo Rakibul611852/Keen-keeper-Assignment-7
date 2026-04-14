@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router";
 
 const FriendCard = ({friend}) => {
   return(
-      <div className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-100">
+      <Link to={`/friendDetails/${friend.id}`} className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-100">
     
           {/* Profile Image */}
           <img
@@ -15,16 +16,6 @@ const FriendCard = ({friend}) => {
           <h2 className="text-xl font-bold mt-4 text-center">
             {friend.name}
           </h2>
-
-          {/* Email */}
-          <p className="text-sm text-gray-500 text-center">
-            {friend.email}
-          </p>
-
-          {/* Bio */}
-          <p className="text-sm text-gray-600 text-center mt-2">
-            {friend.bio}
-          </p>
 
           {/* Days Since Contact */}
           <p className="text-gray-500 text-sm text-center mt-2">
@@ -42,11 +33,6 @@ const FriendCard = ({friend}) => {
               </div>
             ))}
           </div>
-
-          {/* Next Due Date */}
-          <p className="text-xs text-gray-500 text-center mt-3">
-            Next Due: {friend.next_due_date}
-          </p>
 
           {/* Status */}
           <div className="mt-4 text-center">
@@ -67,7 +53,7 @@ const FriendCard = ({friend}) => {
             </span>
           </div>
 
-        </div>
+        </Link>
 
         );
 };
