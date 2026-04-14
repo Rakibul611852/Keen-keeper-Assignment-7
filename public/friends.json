@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "name": "Sam Johnson",
+    "picture": "https://picsum.photos/id/101/300/300",
+    "email": "sam.johnson@example.com",
+    "days_since_contact": 1,
+    "status": "active",
+    "tag": ["gaming", "hiking", "art"],
+    "bio": "Old friend from university. We always going to concerts.",
+    "goal": 30,
+    "next_due_date": "2025-08-13"
+  },
+  {
+    "id": 2,
+    "name": "Alex Smith",
+    "picture": "https://picsum.photos/id/102/300/300",
+    "email": "alex.smith@example.com",
+    "days_since_contact": 5,
+    "status": "active",
+    "tag": ["hiking"],
+    "bio": "Childhood friend who shares my love for hiking.",
+    "goal": 30,
+    "next_due_date": "2025-08-09"
+  },
+  {
+    "id": 3,
+    "name": "Casey Davis",
+    "picture": "https://picsum.photos/id/103/300/300",
+    "email": "casey.davis@example.com",
+    "days_since_contact": 37,
+    "status": "overdue",
+    "tag": ["coding", "art"],
+    "bio": "Met in high school. Love watching movies together.",
+    "goal": 14,
+    "next_due_date": "2025-07-16"
+  },
+  {
+    "id": 4,
+    "name": "Casey Gonzalez",
+    "picture": "https://picsum.photos/id/104/300/300",
+    "email": "casey.gonzalez@example.com",
+    "days_since_contact": 21,
+    "status": "needs attention",
+    "tag": ["work"],
+    "bio": "Discussing books buddy from university.",
+    "goal": 21,
+    "next_due_date": "2025-07-16"
+  },
+  {
+    "id": 5,
+    "name": "Drew Smith",
+    "picture": "https://picsum.photos/id/250/300/300",
+    "email": "drew.smith@example.com",
+    "days_since_contact": 46,
+    "status": "overdue",
+    "tag": ["childhood", "work"],
+    "bio": "Going to concerts buddy from university.",
+    "goal": 21,
+    "next_due_date": "2025-07-16"
+  },
+  {
+    "id": 6,
+    "name": "Parker Brown",
+    "picture": "https://picsum.photos/id/106/300/300",
+    "email": "parker.brown@example.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tag": ["college"],
+    "bio": "Old friend from the office. We always gaming.",
+    "goal": 30,
+    "next_due_date": "2025-07-16"
+  },
+  {
+    "id": 7,
+    "name": "Morgan Davis",
+    "picture": "https://picsum.photos/id/107/300/300",
+    "email": "morgan.davis@example.com",
+    "days_since_contact": 40,
+    "status": "overdue",
+    "tag": ["gym", "music"],
+    "bio": "Known each other since we were kids. Big fan of playing basketball.",
+    "goal": 7,
+    "next_due_date": "2025-07-16"
+  },
+  {
+    "id": 8,
+    "name": "Parker Hernandez",
+    "picture": "https://picsum.photos/id/108/300/300",
+    "email": "parker.hernandez@example.com",
+    "days_since_contact": 10,
+    "status": "active",
+    "tag": ["sports", "hiking", "gym"],
+    "bio": "Playing basketball buddy from the gym.",
+    "goal": 14,
+    "next_due_date": "2025-07-19"
+  },
+  {
+    "id": 9,
+    "name": "Sam Garcia",
+    "picture": "https://picsum.photos/id/109/300/300",
+    "email": "sam.garcia@example.com",
+    "days_since_contact": 53,
+    "status": "overdue",
+    "tag": ["hiking"],
+    "bio": "Met in the office. Love watching movies together.",
+    "goal": 14,
+    "next_due_date": "2025-07-16"
+  },
+  {
+    "id": 10,
+    "name": "Finley Martinez",
+    "picture": "https://picsum.photos/id/110/300/300",
+    "email": "finley.martinez@example.com",
+    "days_since_contact": 56,
+    "status": "overdue",
+    "tag": ["music", "hiking", "book club"],
+    "bio": "Coding projects buddy from the gym.",
+    "goal": 14,
+    "next_due_date": "2025-07-16"
+  }
+  
+]

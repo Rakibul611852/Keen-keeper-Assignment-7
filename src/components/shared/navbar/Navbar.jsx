@@ -12,7 +12,7 @@ const Links = <>
     <NavLink 
       to={"/"} 
       className={({ isActive }) => 
-      `flex items-center mr-1 
+      `flex items-center gap-2 
       border border-green-200 rounded-md px-2 py-1 font-semibold ${ isActive 
           ? " text-white bg-[#244D3F] px-2 py-1 rounded" 
           : ""}`
@@ -26,7 +26,7 @@ const Links = <>
     <NavLink 
       to={"/timeline"} 
        className={({ isActive }) => 
-      `flex items-center mr-1 
+      `flex items-center gap-2
       border border-green-200 rounded-md px-2 py-1 font-semibold${ isActive 
           ? " text-white bg-[#244D3F] px-2 py-1 rounded" 
           : ""}`
@@ -40,7 +40,7 @@ const Links = <>
     <NavLink 
       to={"/stats"} 
        className={({ isActive }) => 
-      `flex items-center mr-1 
+      `flex items-center gap-2 
       border border-green-200 rounded-md px-2 py-1 font-semibold ${ isActive 
           ? " text-white bg-[#244D3F] px-2 py-1 rounded" 
           : ""}`
