@@ -12,9 +12,15 @@ const Timeline = () => {
       console.log(callList,smsList,videoList, "friendContext")
   
   return (
+
       <div className='container mx-auto'>
 
-       <Tabs>
+        <div>
+            <h2 className='text-3xl font-bold mt-20 mb-10 '>Timeline </h2>
+        </div>
+          
+       <div>
+         <Tabs>
           <TabList>
             <Tab>Call</Tab>
             <Tab>Text</Tab>
@@ -33,6 +39,7 @@ const Timeline = () => {
             <VideoList/>
           </TabPanel>
         </Tabs>
+      </div>
 
       
       </div>

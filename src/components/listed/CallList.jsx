@@ -1,20 +1,52 @@
-import React from 'react'
+import React, { useContext } from 'react';
 import { MdOutlinePhoneInTalk } from 'react-icons/md';
+import { FriendContext } from '../../context/FriendContext';
+
 const CallList = () => {
+  const { callList, smsList, videoList } = useContext(FriendContext);
+  console.log(callList, smsList, videoList, "friendContext");
+
   return (
-   <div class="px-6 pt-6 pb-4 flex items-center gap-4 shadow-xl mt-20 border border-gray-200 rounded-xl">
-      <div class="w-12 h-12 rounded-2xl flex items-center justify-center ">
-        <span className='text-4xl font-bold'><MdOutlinePhoneInTalk/></span>
-        <i class="fa-solid fa-sparkles text-white text-2xl"></i>
+    <div className='container mx-auto mt-20'>
+      {
+          <div className="">
+      {callList?.map((friend) => (
+            <div className=" shadow-2xl border border-gray-200 rounded-xl p-4 flex items-center justify-between mb-3 hover:bg-gray-200 transition duration-200">
+      
+      {/* Left Content */}
+      <div className="flex items-center gap-5">
+        
+        {/* Avatar */}
+        <div className="rounded-full border border-gray-200 p-2 flex items-center justify-center">
+         <button className=" hover:text-green-500 text-3xl transition">
+        <MdOutlinePhoneInTalk />
+      </button>
+        </div>
+
+        {/* Text */}
+        <div>
+          <h3>
+            <span className="font-semibold text-xl">Call</span> <span className='text-gray-600'>with {friend.name}</span>
+          </h3>
+          <p className="text-sm text-gray-500">
+            {new Date().toLocaleDateString("en-US", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
+          </p>
+        </div>
       </div>
-      <div>
-        <p class="font-semibold"><span className='text-3xl font-bold'>Text</span> with <span></span></p>
-        <p class="text-zinc-400 text-sm flex items-center gap-1">
-          <i class="fa-solid fa-calendar-day"></i>
-          March 28, 2026
-        </p>
-      </div>
+
+      {/* Call Icon */}
+     
     </div>
-  )
-}
+
+      ))}
+    </div>
+      }
+    </div>
+  );
+};
+
 export default CallList;
