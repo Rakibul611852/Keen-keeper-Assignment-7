@@ -1,10 +1,11 @@
-import React, { use } from 'react'
+import React, { use, useContext, useState } from 'react'
 import { BsChatLeftTextFill } from 'react-icons/bs';
 import { FaVideo } from 'react-icons/fa';
 import { FiArchive } from 'react-icons/fi';
 import { MdOutlinePhoneInTalk } from 'react-icons/md';
 import { RiNotificationSnoozeLine } from 'react-icons/ri';
 import { useLoaderData, useParams } from 'react-router';
+import { FriendContext } from '../../context/FriendContext';
 
 // const friendsPromise = fetch("/friends.json").then((res) => res.json());
 
@@ -12,17 +13,23 @@ import { useLoaderData, useParams } from 'react-router';
 const FriendDetails = () => {
 
     const {id} = useParams();
-    console.log(id,"id");
+    
 
     // const friends = use(friendsPromise);
     // console.log(friends, "friends")
 
     const friends = useLoaderData();
-    console.log(friends, "friends")
+    // console.log(friends, "friends")
     const expectedFriend = friends.find(friend=>friend.id == id)
-    console.log(expectedFriend, "expectedFriend")
+    // console.log(expectedFriend, "expectedFriend")
 
-  return   <div className= "mt-12 ">
+  const {handleCall,handleSms,handleVideo} = useContext(FriendContext);
+
+
+
+
+  return (
+    <div className= "mt-12 ">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-6 bg-gray-200 p-10 rounded-xl">
 
         {/* LEFT SIDE */}
@@ -72,12 +79,12 @@ const FriendDetails = () => {
           </div>
 
            {/* Bio */}
-          <p className="text-sm text-gray-600 text-center mt-2">
+          <p className=" text-center mt-1">
            " {expectedFriend.bio}"
           </p>
 
             {/* Email */}
-          <p className="text-sm text-gray-500 text-center">
+          <p className=" text-center mt-1">
            Preferred : {expectedFriend.email}
           </p>
    
@@ -104,21 +111,21 @@ const FriendDetails = () => {
 
           {/* Top Stats */}
           <div className="grid sm:grid-cols-3 gap-4 text-[#244D3F]">
-            <div className="bg-white p-6 rounded-xl shadow text-center space-y-2">
-              <h2 className="text-3xl font-bold">
+            <div className="bg-white p-10 rounded-xl shadow text-center space-y-3">
+              <h2 className="text-3xl font-bold ">
                 {expectedFriend.days_since_contact}
               </h2>
               <p className="text-gray-500">Days Since Contact</p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow text-center space-y-2">
+            <div className="bg-white p-10 rounded-xl shadow text-center space-y-3">
               <h2 className="text-3xl font-bold">
                 {expectedFriend.goal}
               </h2>
               <p className="text-gray-500">Goal (Days)</p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow text-center space-y-2">
+            <div className="bg-white p-10 rounded-xl shadow text-center space-y-3">
               <h2 className="text-2xl font-bold">
                 {expectedFriend.next_due_date}
               </h2>
@@ -149,15 +156,23 @@ const FriendDetails = () => {
             </h3>
 
             <div className="grid grid-cols-3 gap-4">
-              <button className="p-6 border border-gray-200 rounded-lg flex flex-col items-center gap-2 bg-gray-200 hover:bg-gray-50">
-                <span className='text-4xl font-bold'><MdOutlinePhoneInTalk/></span><span className='text-xl font-bold'>Call</span>
-              </button>
+              <button
+                  className="p-6 border border-gray-200 rounded-lg flex flex-col items-center gap-2 bg-gray-200 hover:bg-gray-50"
+                  onClick={() => handleCall(expectedFriend)}
+                >
+                  <span className='text-4xl font-bold'><MdOutlinePhoneInTalk/></span>
+                  <span className='text-xl font-bold'>Call</span>
+                </button>
 
-              <button className="p-6 border border-gray-200 rounded-lg flex flex-col items-center gap-2 bg-gray-200 hover:bg-gray-50">
+              <button className="p-6 border border-gray-200 rounded-lg flex flex-col items-center gap-2 bg-gray-200 hover:bg-gray-50"
+              onClick={() => handleSms(expectedFriend)}
+              >
                <span className='text-4xl font-bold'><BsChatLeftTextFill /></span> <span className='text-xl font-bold'>Text</span>
               </button>
 
-              <button className="p-6 border border-gray-200 rounded-lg flex flex-col items-center gap-2 bg-gray-200 hover:bg-gray-50">
+              <button className="p-6 border border-gray-200 rounded-lg flex flex-col items-center gap-2 bg-gray-200 hover:bg-gray-50"
+              onClick={() => handleVideo(expectedFriend)}
+              >
                 <span className='text-4xl font-bold'><FaVideo /></span><span className='text-xl font-bold'>Video</span>
               </button> 
 
@@ -165,10 +180,12 @@ const FriendDetails = () => {
             </div>
           
         
-          </div>
+        </div>
+
       </div>
-      </div>
+    </div>
       
+  )
 
 }
 export default FriendDetails;
