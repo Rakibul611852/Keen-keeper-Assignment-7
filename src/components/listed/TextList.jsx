@@ -15,18 +15,18 @@ const { callList, smsList, videoList } = useContext(FriendContext);
                     <div className=" shadow-2xl border border-gray-200 rounded-xl p-4 flex items-center justify-between mb-3 hover:bg-gray-200 transition duration-200">
               
               {/* Left Content */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-10">
                 
                 {/* Avatar */}
-                <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-lg">
-                <button className="text-gray-500 hover:text-green-500 text-xl transition">
+                <div className=" rounded-full border border-gray-200 flex items-center justify-center p-2">
+                <button className="text-3xl transition">
                 <BsChatLeftTextFill />
               </button>
                 </div>
         
                 {/* Text */}
                 <div>
-                  <h3 className="text-gray-800 font-medium">
+                  <h3 className="text-gray-800 font-medium mb-2">
                     <span className="font-semibold">Text</span> with {friend.name}
                   </h3>
                   <p className="text-sm text-gray-500">
