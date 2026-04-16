@@ -6,8 +6,9 @@ import { FriendContext } from '../../context/FriendContext';
   const { callList, smsList, videoList } = useContext(FriendContext);
   console.log(callList, smsList, videoList, "friendContext");
 
+
   return (
-    <div className='container mx-auto mt-20'>
+    <div className='container mx-auto'>
       {
           <div className="">
       {videoList?.map((friend) => (
@@ -26,7 +27,7 @@ import { FriendContext } from '../../context/FriendContext';
         {/* Text */}
         <div>
           <h3>
-            <span className="font-semibold text-xl">Call</span> <span className='text-gray-600'>with {friend.name}</span>
+            <span className="font-semibold text-xl">Video</span> <span className='text-gray-600'>with {friend.name}</span>
           </h3>
           <p className="text-sm text-gray-500">
             {new Date().toLocaleDateString("en-US", {

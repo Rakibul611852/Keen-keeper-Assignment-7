@@ -8,7 +8,7 @@ const { callList, smsList, videoList } = useContext(FriendContext);
   console.log(callList, smsList, videoList, "friendContext");
 
   return (
-     <div className='container mx-auto mt-20'>
+     <div className='container mx-auto'>
           {
               <div className="">
               {smsList?.map((friend) => (
