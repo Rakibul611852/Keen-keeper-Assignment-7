@@ -7,13 +7,11 @@ const AllFriends = () => {
   const [friends, setFriends] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // 🔥 fetch data
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch("/friends.json");
       const data = await res.json();
 
-      // fake delay (optional)
       setTimeout(() => {
         setFriends(data);
         setLoading(false);
@@ -28,7 +26,6 @@ const AllFriends = () => {
 
       <h2 className="text-3xl font-bold mb-6">Your Friends</h2>
 
-      {/* 🔥 Loading */}
       {loading ? (
         <div className="flex justify-center items-center h-40">
           <ClipLoader />

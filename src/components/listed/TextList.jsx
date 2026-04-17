@@ -4,27 +4,25 @@ import { FriendContext } from '../../context/FriendContext';
 
 const TextList = () => {
 
-const { callList, smsList, videoList } = useContext(FriendContext);
-  console.log(callList, smsList, videoList, "friendContext");
+const {textList,} = useContext(FriendContext);
+  console.log(textList,"friendContext");
 
   return (
      <div className='container mx-auto'>
           {
               <div className="">
-              {smsList?.map((friend) => (
-                    <div className=" shadow-2xl border border-gray-200 rounded-xl p-4 flex items-center justify-between mb-3 hover:bg-gray-200 transition duration-200">
-              
-              {/* Left Content */}
+              {textList?.map((friend) => (
+            <div className=" shadow-2xl border border-gray-200 rounded-xl p-4 flex items-center justify-between mb-3 hover:bg-gray-200 transition duration-200">
+
               <div className="flex items-center gap-10">
-                
-                {/* Avatar */}
+
                 <div className=" rounded-full border border-gray-200 flex items-center justify-center p-2">
-                <button className="text-3xl transition">
-                <BsChatLeftTextFill />
-              </button>
+                  <button className="text-3xl transition">
+                      <BsChatLeftTextFill />
+                  </button>
                 </div>
         
-                {/* Text */}
+
                 <div>
                   <h3 className="text-gray-800 font-medium mb-2">
                     <span className="font-semibold">Text</span> with {friend.name}
@@ -38,8 +36,7 @@ const { callList, smsList, videoList } = useContext(FriendContext);
                   </p>
                 </div>
               </div>
-        
-              {/* Call Icon */}
+
             
             </div>
     

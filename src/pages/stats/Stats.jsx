@@ -5,12 +5,12 @@ import { FriendContext } from "../../context/FriendContext";
 const Stats = () => {
   
 
-      const { callList, smsList, videoList } = useContext(FriendContext);
+      const { callList, textList, videoList } = useContext(FriendContext);
 
 
   const data = [
     { name: "Call", value:callList.length, fill: "#244d3f" },
-    { name: "Text", value: smsList.length, fill: "#7E22CE" },
+    { name: "Text", value: textList.length, fill: "#7E22CE" },
     { name: "Video", value: videoList.length, fill: "#16A34A" },
   ];
 
@@ -18,12 +18,10 @@ const Stats = () => {
 
   return (
     <div className="container mx-auto mt-20">
-      {/* Title */}
       <h2 className="font-bold text-3xl mb-10 ">
         Friendship Analytics
       </h2>
 
-      {/* Chart Box */}
       <div className="w-full h-[400px] bg-stone-100 shadow-2xl rounded-xl py-15">
         
         <h3 className="font-semibold ml-10 text-xl text-gray-600">

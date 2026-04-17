@@ -3,8 +3,8 @@ import { FaVideo } from 'react-icons/fa';
 import { FriendContext } from '../../context/FriendContext';
 
  const VideoList = () => {
-  const { callList, smsList, videoList } = useContext(FriendContext);
-  console.log(callList, smsList, videoList, "friendContext");
+  const {videoList } = useContext(FriendContext);
+  console.log(videoList, "friendContext");
 
 
   return (
@@ -13,18 +13,15 @@ import { FriendContext } from '../../context/FriendContext';
           <div className="">
       {videoList?.map((friend) => (
             <div className=" shadow-2xl border border-gray-200 rounded-xl p-4 flex items-center justify-between mb-3 hover:bg-gray-200 transition duration-200">
-      
-      {/* Left Content */}
+
       <div className="flex items-center gap-5">
         
-        {/* Avatar */}
         <div className="rounded-full border border-gray-200 p-2 flex items-center justify-center">
          <button className=" hover:text-green-500 text-3xl transition">
         <FaVideo />
       </button>
         </div>
 
-        {/* Text */}
         <div>
           <h3>
             <span className="font-semibold text-xl">Video</span> <span className='text-gray-600'>with {friend.name}</span>
@@ -38,8 +35,6 @@ import { FriendContext } from '../../context/FriendContext';
           </p>
         </div>
       </div>
-
-      {/* Call Icon */}
      
     </div>
 

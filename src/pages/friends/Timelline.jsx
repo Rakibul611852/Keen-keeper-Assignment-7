@@ -7,17 +7,16 @@ import VideoList from '../../components/listed/VideoList';
 import { MdOutlineNotInterested } from 'react-icons/md';
 
 const Timeline = () => {
-  const { callList, smsList, videoList } = useContext(FriendContext);
+  const { callList, textList, videoList } = useContext(FriendContext);
   const [filter, setFilter] = useState("all");
 
-  // 🔥 check if data exists
   const isEmpty =
     (filter === "call" && callList.length === 0) ||
-    (filter === "text" && smsList.length === 0) ||
+    (filter === "text" && textList.length === 0) ||
     (filter === "video" && videoList.length === 0) ||
     (filter === "all" &&
       callList.length === 0 &&
-      smsList.length === 0 &&
+      textList.length === 0 &&
       videoList.length === 0);
 
   return (
@@ -26,7 +25,6 @@ const Timeline = () => {
         Timeline
       </h2>
 
-      {/* Dropdown */}
       <div>
         <select
           className='border border-gray-300 w-[30%] p-4 rounded-lg text-lg font-semibold mb-6'
@@ -40,7 +38,6 @@ const Timeline = () => {
         </select>
       </div>
 
-      {/* ❗ No Data Message */}
       {isEmpty && (
         <div className='h-[40vh] bg-gray-100 flex items-center justify-center'>
           <h2 className='font-bold text-3xl flex items-center gap-3'>
@@ -50,7 +47,6 @@ const Timeline = () => {
         </div>
       )}
 
-      {/* 📌 Lists */}
       {!isEmpty && (
         <>
           {(filter === "all" || filter === "call") && (
@@ -58,7 +54,7 @@ const Timeline = () => {
           )}
 
           {(filter === "all" || filter === "text") && (
-            <TextList data={smsList} />
+            <TextList data={textList} />
           )}
 
           {(filter === "all" || filter === "video") && (

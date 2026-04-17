@@ -55,7 +55,6 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* 🔥 DESKTOP MENU (Tablet + Desktop) */}
         <div className="hidden md:flex">
           <ul className="flex items-center gap-5">
             {Links}

@@ -6,18 +6,13 @@ export const FriendContext = createContext();
 const FriendProvider = ({ children }) => {
 
     const [callList, setCallList] = useState ([]);
-    const [smsList, setSmsList] = useState ([]);
+    const [textList, setTextList] = useState ([]);
     const [videoList, setVideoList] = useState ([]);
 
     
 
     const handleCall= (currentFriend) => {
-      //step 1 : store friend id 
-      //step 2 : where to store 
-      //step 3 : array or collection 
-      //step 4 : if the friend is allready exist then show a alert or toast 
-      //step 5 : if not then add the book in the array or collection
-      
+
 
       const isExistFriend = callList.find(friend =>friend.id  ===currentFriend.id)
       if(isExistFriend) {
@@ -36,55 +31,43 @@ const FriendProvider = ({ children }) => {
 
       };
 
-     const handleSms= (currentFriend) => {
-      //step 1 : store friend id 
-      //step 2 : where to store 
-      //step 3 : array or collection 
-      //step 4 : if the friend is allready exist then show a alert or toast 
-      //step 5 : if not then add the book in the array or collection
-      
+     const handleText= (currentFriend) => {
+
       const isExixtInCallList =callList.find(
         (friend) => friend.id === currentFriend.id,
       );
 
 
-      const isExistFriend = smsList.find(friend =>friend.id  ===currentFriend.id)
+      const isExistFriend = textList.find(friend =>friend.id  ===currentFriend.id)
       if(isExistFriend) {
         toast.error("The Text is already exist",{
         position:'top-center'
         })
       } else {
-       setSmsList([...smsList,currentFriend])
+       setTextList([...textList,currentFriend])
         toast.success(`${currentFriend.name} is added to Text List`,{
         position:'top-center'
         })
       }
 
-
-      console.log(currentFriend, smsList,"friend")
+      console.log(currentFriend, textList,"friend")
 
       };
 
-
        const handleVideo= (currentFriend) => {
-      //step 1 : store friend id 
-      //step 2 : where to store 
-      //step 3 : array or collection 
-      //step 4 : if the friend is allready exist then show a alert or toast 
-      //step 5 : if not then add the book in the array or collection
-      
-      const isExixtInCallList =[...callList, ...smsList].find(
+
+      const isExixtInCallList =[...callList, ...textList].find(
         (friend) => friend.id === currentFriend.id,
       );
 
       const isExistFriend = videoList.find(friend =>friend.id  ===currentFriend.id)
       if(isExistFriend) {
-        toast.error("The Text is already exist",{
+        toast.error("The Video is already exist",{
         position:'top-center'
         })
       } else {
        setVideoList([...videoList,currentFriend])
-        toast.success(`${currentFriend.name} is added to Text List`,{
+        toast.success(`${currentFriend.name} is added to Video List`,{
         position:'top-center'
         })
       }
@@ -101,9 +84,9 @@ const FriendProvider = ({ children }) => {
     callList, 
     setCallList,
     handleCall,
-    smsList,
-    setSmsList,
-    handleSms,
+    textList,
+    setTextList,
+    handleText,
     videoList,
     setVideoList,
     handleVideo,
