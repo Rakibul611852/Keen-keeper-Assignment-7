@@ -9,6 +9,8 @@ const FriendProvider = ({ children }) => {
     const [smsList, setSmsList] = useState ([]);
     const [videoList, setVideoList] = useState ([]);
 
+    
+
     const handleCall= (currentFriend) => {
       //step 1 : store friend id 
       //step 2 : where to store 
