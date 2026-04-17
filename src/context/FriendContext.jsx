@@ -20,15 +20,13 @@ const FriendProvider = ({ children }) => {
       const isExistFriend = callList.find(friend =>friend.id  ===currentFriend.id)
       if(isExistFriend) {
         toast.error("The Call is already exist",{
-         position: "top-center"
+        position:'top-center'
         })
-         
       } else {
         setCallList([...callList,currentFriend])
         toast.success(`${currentFriend.name} is added to Call List`,{
-        position: "top-center"
+        position:'top-center'
         })
-        
       }
 
 
@@ -51,14 +49,13 @@ const FriendProvider = ({ children }) => {
       const isExistFriend = smsList.find(friend =>friend.id  ===currentFriend.id)
       if(isExistFriend) {
         toast.error("The Text is already exist",{
-         position: "top-center"
-      })
+        position:'top-center'
+        })
       } else {
        setSmsList([...smsList,currentFriend])
         toast.success(`${currentFriend.name} is added to Text List`,{
-         position: "top-center"
+        position:'top-center'
         })
-        
       }
 
 
@@ -78,16 +75,15 @@ const FriendProvider = ({ children }) => {
         (friend) => friend.id === currentFriend.id,
       );
 
-
       const isExistFriend = videoList.find(friend =>friend.id  ===currentFriend.id)
       if(isExistFriend) {
         toast.error("The Text is already exist",{
-         position: "top-center"
+        position:'top-center'
         })
       } else {
        setVideoList([...videoList,currentFriend])
         toast.success(`${currentFriend.name} is added to Text List`,{
-         position: "top-center"
+        position:'top-center'
         })
       }
 

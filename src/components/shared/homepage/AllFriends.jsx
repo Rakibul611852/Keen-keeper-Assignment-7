@@ -1,10 +1,11 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import FriendCard from "../../ui/FriendCard";
 
 const friendsPromise = fetch("/friends.json").then((res) => res.json());
 
 const AllFriends = () => {
   const friends = use(friendsPromise);
+ 
 
   return (
     <div className="mt-20 container mx-auto">
