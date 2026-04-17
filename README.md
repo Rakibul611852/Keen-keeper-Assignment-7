@@ -1,16 +1,42 @@
-# React + Vite
+# 📌 Project Name:
+Keen-Keeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 📖 Description:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Keen-Keeper is designed to help users maintain better communication with friends by tracking interaction history such as calls, texts, and video check-ins. It provides a clean and interactive UI to manage relationships efficiently.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies Used:
 
-## Expanding the ESLint configuration
+* React.js
+* Tailwind CSS
+* React Router
+* React Context API
+* React Toastify
+* React Icons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Key Features:
+
+* 📞 Track Call, Text, and Video interactions separately
+* 🔍 Filter timeline by interaction type (All / Call / Text / Video)
+* ⚠️ Prevent duplicate entries with instant toast notifications
+* 🎨 Clean and responsive UI using Tailwind CSS
+* 🔄 Global state management using React Context API
+
+---
+
+
+## 👨‍💻 Author
+
+**Rakibul Islam**
+
+---
+
+## 📌 Note
+
+This project was built for learning and practice purposes to improve React skills, especially Context API, component structuring, and state management.

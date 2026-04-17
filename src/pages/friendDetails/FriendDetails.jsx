@@ -19,7 +19,6 @@ const FriendDetails = () => {
 
   const { handleCall, handleText, handleVideo } = useContext(FriendContext);
 
-  // ✅ Loading state
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -36,7 +35,6 @@ const FriendDetails = () => {
 
         {(loading || !expectedFriend) ? (
 
-          // ✅ Spinner only for details section
           <div className="flex justify-center items-center h-64">
                <ClipLoader />
           </div>
@@ -45,7 +43,6 @@ const FriendDetails = () => {
 
           <div className="grid lg:grid-cols-3 gap-6">
 
-            {/* LEFT SIDE */}
             <div className="space-y-4">
 
               <div className="bg-white rounded-xl shadow p-6 text-center">
@@ -59,7 +56,6 @@ const FriendDetails = () => {
                   {expectedFriend.name}
                 </h2>
 
-                {/* Status */}
                 <div className="mt-4">
                   <span
                     className={`px-4 py-1 rounded-full text-sm font-semibold ${
@@ -78,7 +74,6 @@ const FriendDetails = () => {
                   </span>
                 </div>
 
-                {/* Tags */}
                 <div className="flex justify-center gap-2 mt-3 flex-wrap">
                   {expectedFriend.tag.map((tag, ind) => (
                     <div
@@ -90,16 +85,13 @@ const FriendDetails = () => {
                   ))}
                 </div>
 
-                {/* Bio */}
                 <p className="mt-2">"{expectedFriend.bio}"</p>
 
-                {/* Email */}
                 <p className="mt-1 text-sm text-gray-600">
                   Preferred: {expectedFriend.email}
                 </p>
               </div>
 
-              {/* Actions */}
               <div className="space-y-3">
                 <button className="w-full flex items-center justify-center gap-2 bg-white p-3 rounded-lg shadow">
                   <RiNotificationSnoozeLine /> Snooze 2 weeks
@@ -115,7 +107,6 @@ const FriendDetails = () => {
               </div>
             </div>
 
-            {/* RIGHT SIDE */}
             <div className="lg:col-span-2 space-y-6">
 
               <div className="grid sm:grid-cols-3 gap-4 text-[#244D3F]">
@@ -141,7 +132,6 @@ const FriendDetails = () => {
                 </div>
               </div>
 
-              {/* Goal */}
               <div className="bg-white p-6 rounded-xl shadow flex justify-between items-center">
                 <div>
                   <h3 className="font-semibold text-lg">
@@ -160,7 +150,6 @@ const FriendDetails = () => {
                 </button>
               </div>
 
-              {/* Quick Actions */}
               <div className="bg-white p-6 rounded-xl shadow">
                 <h3 className="font-semibold text-lg mb-4">
                   Quick Check-In

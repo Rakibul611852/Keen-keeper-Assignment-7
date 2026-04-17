@@ -9,8 +9,6 @@ const FriendProvider = ({ children }) => {
     const [textList, setTextList] = useState ([]);
     const [videoList, setVideoList] = useState ([]);
 
-    
-
     const handleCall= (currentFriend) => {
 
 
@@ -25,7 +23,6 @@ const FriendProvider = ({ children }) => {
         position:'top-center'
         })
       }
-
 
       console.log(currentFriend, callList,"friend")
 
@@ -72,12 +69,9 @@ const FriendProvider = ({ children }) => {
         })
       }
 
-
       console.log(currentFriend, videoList,"friend")
 
       };
-
-
 
 
   const data = {
